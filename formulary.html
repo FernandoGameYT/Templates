@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <script src="js/main.js"></script>
+    <title>Template #1: Formulary</title>
+    <style type="text/css">
+    	body {
+    		background: linear-gradient(#350037, #003537);
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+    	}
+    </style>
+</head>
+<body>
+    <header class="bg-nav">
+        <div class="logo">Template #1</div>
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="more-templates.html"><li>More Templates</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+                <a href="formulary.html"><li>Form</li></a>
+            </ul>
+        </nav>
+        <button class="icon-button" id="collapse-button">
+            <span class="fa fa-bars"></span>
+        </button>
+        
+        <div class="form-cube">
+            <form method="POST" action="#" class="form-login active">
+                <p>Coloca tu email: </p>
+                <input type="email" name="email">
+
+                <p>Coloca tu contraseña: </p>
+                <input type="password" name="password">
+                <input type="submit" value="Iniciar Sesion" class="btn-ghost">
+
+                <a href="#" id="recovery">¿Olvidaste tu contraseña?</a>
+
+                <button class="btn-ghost secundary" id="registerMove">
+                    Registrate
+                    <span class="fa fa-arrow-circle-right"></span>
+                </button>
+            </form>
+
+            <form method="POST" action="#" class="form-register">
+                <p>Coloca tu username: </p>
+                <input type="text" name="username">
+
+                <p>Coloca tu email: </p>
+                <input type="email" name="email">
+
+                <p>Coloca tu contraseña: </p>
+                <input type="password" name="password">
+
+                <p>Repite tu contraseña: </p>
+                <input type="password" name="password-repeat">
+
+                <input type="submit" value="Registrarse" class="btn-ghost">
+
+                <button class="btn-ghost secundary" id="loginMove">
+                    <span class="fa fa-arrow-circle-left"></span>
+                    Inicia Sesion
+                </button>
+            </form>
+
+            <form method="POST" action="#" class="form-recovery">
+                <p>Coloca tu username: </p>
+                <input type="text" name="username">
+
+                <p>Coloca tu email: </p>
+                <input type="email" name="email">
+
+                <input type="submit" value="Enviar correo" class="btn-ghost">
+
+                <button class="btn-ghost secundary" id="recoveryMove">
+                    Inicia Sesion
+                    <span class="fa fa-arrow-circle-right"></span>
+                </button>
+            </form>
+        </div>
+
+    </header>
+    <script>
+        var formLogin = document.querySelector(".form-login");
+        var formRegister = document.querySelector(".form-register");
+        var formRecovery = document.querySelector(".form-recovery");
+        document.getElementById("registerMove")
+        .addEventListener("click", e => {
+            e.preventDefault();
+            formLogin.className = "form-login";
+            formRegister.className += " active";
+        });
+        document.getElementById("loginMove")
+        .addEventListener("click", e => {
+            e.preventDefault();
+            formRegister.className = "form-register";
+            formLogin.className += " active";
+        });
+        document.getElementById("recoveryMove")
+        .addEventListener("click", e => {
+            e.preventDefault();
+            formRecovery.className = "form-recovery";
+            formLogin.className += " active";
+        });
+        document.getElementById("recovery")
+        .addEventListener("click", e => {
+            e.preventDefault();
+            formLogin.className = "form-login";
+            formRecovery.className += " active";
+        });
+    </script>
+</body>
+</html>
