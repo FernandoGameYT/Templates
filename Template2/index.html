@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/all.min.css">
+	
+	<script src="js/main.js"></script>
+    <title>Template #2</title>
+</head>
+<body>
+	<nav>
+		<div class="logo">Template #2</div>
+		<ul>
+			<a href="index.html"><li>Home</li></a>
+			<a href="contact.html"><li>Contact</li></a>
+			<a href="more-templates.html"><li>More Templates</li></a>
+			<a href="formulary.html"><li>Login</li></a>
+		</ul>
+		<a class="icon" id="collapse">
+			<span class="fa fa-bars"></span>
+		</a>
+	</nav>
+	<header class="bg">
+		<div class="text-anim-right">
+			<h2>Template #2</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem dolorum culpa, quo laboriosam deleniti doloribus ipsam molestiae perspiciatis cumque a sed, itaque, tempore nulla quod explicabo eos corrupti eum?</p>
+		</div>
+	</header>
+	<div class="content-center">
+		<h2>Welcome to my website</h2>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt praesentium dignissimos sit dolor. A culpa, minus accusantium at numquam ipsa nobis sunt nisi similique possimus vero cum error tempore cumque!</p>
+	</div>
+	<div class="img-banner" id="img-banner">
+		<img src="../img/background_2.jpg">
+		<div class="box-container" id="box-container">
+			<div class="box-circle">
+				<div class="content">
+					<i class="fa fa-bars"></i>
+					<p>All templates</p>
+				</div>
+			</div>
+			<div class="box-circle">
+				<div class="content">
+					<i class="fa fa-user"></i>
+					<p>Click for login</p>
+				</div>
+			</div>
+			<div class="box-circle">
+				<div class="content">
+					<i class="fa fa-share-alt"></i>
+					<p>Social networks</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+			<div class="social">
+				<a href="https://twitter.com/FernandoVT10"><button><i class="fa fa-twitter"></i></button></a>
+				<a href="https://www.facebook.com/Fernando-Vaca-Tamayo-2045100942486498/"><button><i class="fa fa-facebook"></i></button></a>
+				<a href="https://github.com/FernandoGameYT"><button><i class="fa fa-github"></i></button></a>
+				<a href="https://linkedin.com/in/fernando-vaca-tamayo-330885162/"><button><i class="fa fa-linkedin"></i></button></a>
+			</div>
+		</footer>
+	<script>
+		var anim = false;
+		window.addEventListener("scroll", e => {
+			if(window.scrollY >= document.getElementById("img-banner").offsetTop-400 && !anim) {
+				document.getElementById("box-container").animate([
+					// keyframes
+					{ top: "100%", transform: "translateY(0)" }, 
+					{ top: "50%", transform: "translateY(-50%)" }
+					], { 
+					// timing options
+					duration: 500,
+					fill: 'forwards',
+				});
+				anim = true;
+			}
+		});
+	</script>
+</body>
+</html>

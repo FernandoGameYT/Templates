@@ -132,7 +132,7 @@ header .icon-button {
     margin: 10px;
     border-radius: 50%;
     overflow: hidden;
-    transition: transform 0.5s, background 0.5s;
+    transition: 0.5s;
 }
 .card-black:hover {
     transform: scale(1.2);
@@ -161,7 +161,7 @@ header .icon-button {
 }
 .container-center {
     position: absolute;
-    top: 50vh;
+    top: 50%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;

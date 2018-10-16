@@ -14,8 +14,13 @@
     		background: linear-gradient(#350037, #003537);
             background-size: cover;
             background-repeat: no-repeat;
-            min-height: 100vh;
-    	}
+            height: 100vh;
+        }
+        @media (max-width: 384px) {
+            body {
+                height: 160vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -26,7 +31,7 @@
                 <a href="index.html"><li>Home</li></a>
                 <a href="more-templates.html"><li>More Templates</li></a>
                 <a href="contact.html"><li>Contact</li></a>
-                <a href="formulary.html"><li>Form</li></a>
+                <a href="formulary.html"><li>Login</li></a>
             </ul>
         </nav>
         <button class="icon-button" id="collapse-button">
