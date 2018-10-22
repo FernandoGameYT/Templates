@@ -311,21 +311,24 @@ footer .social a button:hover {
 }
 .templates-container {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	background: url(../../img/background_2.jpg);
 }
 .templates-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: auto;
-	max-width: 605px;
-	transform: translate(-50%, -50%);
+	position: relative;
+	display: flex;
+	padding: 80px 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 .template {
 	display: inline-block;
 	position: relative;
+	margin-top: 10px;
 	width: 300px;
 	height: 200px;
 	text-align: center;
@@ -334,6 +337,7 @@ footer .social a button:hover {
 .template:before {
 	content: '';
 	position: absolute;
+	z-index: 1;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -342,8 +346,16 @@ footer .social a button:hover {
 	opacity: 0;
 	transition: 0.5s;
 }
+.template img {
+	position: relative;
+	z-index: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100%;
+}
 .template h2 {
 	position: absolute;
+	z-index: 2;
 	color: white;
 	top: -100%;/* 10px */
 	left: 50%;
@@ -351,6 +363,7 @@ footer .social a button:hover {
 }
 .template a {
 	position: absolute;
+	z-index: 2;
 	top: -100%;/* 100px */
 	left: 50%;
 	color: white;
@@ -377,7 +390,7 @@ footer .social a button:hover {
 	opacity: 1;
 }
 .template:nth-child(1) {
-	background: url(../../img/card-bg-01.png);
+	/* background: url(../../img/card-bg-01.png); */
 	background-size: cover;
 	background-position: center;
 }

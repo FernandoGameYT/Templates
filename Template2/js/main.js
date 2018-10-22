@@ -21,24 +21,20 @@ function onLoad() {
             }
         });
     }
-}
 
-// function fibonacci(num) {
-//     var a = BigInt(0);
-//     var b = BigInt(1);
-//     if(num > 0){
-//         if(num >= 1) {
-//             console.log(BigInt(0));
-//         }
-//         if(num >= 2) {
-//             console.log(BigInt(1));
-//         }
-//         if(num > 2) {
-//             for(var i = 0; i < num-1;i++) {
-//                 b += BigInt(a);
-//                 console.log(b);
-//                 a = BigInt(b - a);
-//             }
-//         }
-//     }
-// }
+    if(document.getElementsByClassName("templates-center")[0]) {
+        var content = document.getElementsByClassName("templates-center")[0];
+        fetch("../js/allTemplates.json").then(response => response.json()).then(res => {
+            res.templates.forEach((template, index) => {
+                if(index != 1) {
+                    const div = document.createElement("div");
+                    div.className = "template";
+                    div.innerHTML = `<img src="../../img/${template.image}" />
+                                    <h2>Template #${template.number}</h2>
+                                    <a href="../${template.url}">View Demo</a>`;
+                    content.appendChild(div);
+                }
+            });
+        });
+    }
+}

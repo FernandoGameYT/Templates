@@ -1,0 +1,19 @@
+{
+    "templates": [
+        {
+            "number": 1,
+            "url": "",
+            "image": "card-bg-01.png"
+        },
+        {
+            "number": 2,
+            "url": "Template2/",
+            "image": "card-bg-02.png"
+        },
+        {
+            "number": 3,
+            "url": "Template3/",
+            "image": "card-bg-03.png"
+        }
+    ]
+}
