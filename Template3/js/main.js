@@ -22,7 +22,7 @@ function onLoad() {
                                     </div>
                                     <div class="back">
                                         <span class="txt-25">Template #${template.number}</span><br>
-                                        <a href="${template.url}">View Demo</a>
+                                        <a href="../${template.url}">View Demo</a>
                                     </div>`;
                     content.appendChild(div);
                 }

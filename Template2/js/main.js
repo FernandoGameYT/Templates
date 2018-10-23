@@ -29,7 +29,7 @@ function onLoad() {
                 if(index != 1) {
                     const div = document.createElement("div");
                     div.className = "template";
-                    div.innerHTML = `<img src="../../img/${template.image}" />
+                    div.innerHTML = `<img src="../img/${template.image}" />
                                     <h2>Template #${template.number}</h2>
                                     <a href="../${template.url}">View Demo</a>`;
                     content.appendChild(div);

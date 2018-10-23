@@ -13,7 +13,7 @@ function documentReady() {
 
 	if(document.getElementsByClassName("card-container")[0]) {
         var content = document.getElementsByClassName("card-container")[0];
-        fetch("../js/allTemplates.json").then(response => response.json()).then(res => {
+        fetch("js/allTemplates.json").then(response => response.json()).then(res => {
             res.templates.forEach((template, index) => {
                 if(index != 0) {
                     const div = document.createElement("div");
